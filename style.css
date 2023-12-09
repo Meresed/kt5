@@ -1,0 +1,54 @@
+body{
+    background-image: url(https://www.fonstola.ru/images/201911/fonstola.ru_360483.jpg);
+    background-size: cover;
+}
+.car{
+    position: absolute;
+    top: 50%;
+    animation: car-ride linear 2s forwards;
+}
+.top{
+    width: 110px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+    left: 30px;
+}
+.bottom{
+    width: 200px;
+    height: 60px;
+    background-color: blue;
+    border-radius: 25px 25px 0 0;
+    position: relative;
+}
+.car::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100%;
+    top: 75%;
+    left: 8%;
+    z-index: 1;
+}
+.car::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    border-radius: 100%;
+    top: 75%;
+    right: 8%;
+    z-index: 1;
+}
+@keyframes car-ride{
+    0%{
+    left: 50px;
+    }
+    100%{
+    left: 83%;
+    }
+}
